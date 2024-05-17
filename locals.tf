@@ -4,8 +4,6 @@ locals{
     for web_firewall in local.waf_policy : [
       for web_firewall_policy in try(app.listofwafpolicy, []) :{
         name = windowapps.name
-        os_type = windowapps.os_type
-        sku_name = windowapps.sku_name
 
       }
     ]

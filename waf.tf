@@ -5,21 +5,21 @@ resource "azurerm_web_application_firewall_policy" "example" {
   location            = azurerm_resource_group.myregiswafrg.location
 
   custom_rules {
-    name      = "Rule1"
-    priority  = 1
-    rule_type = "MatchRule"
+    name      = var.custom_rules_name
+    priority  = var.custom_rules_priority
+    rule_type = var.custom_rules_rule_type
 
     match_conditions {
       match_variables {
-        variable_name = "RemoteAddr"
+        variable_name = var.match_conditions_variables
       }
 
-      operator           = "IPMatch"
-      negation_condition = false
-      match_values       = ["192.168.1.0/24", "10.0.0.0/24"]
+      operator           = var.match_conditions_operator
+      negation_condition = var.match_conditions_negation_condition
+      match_values       = var.match_conditions_match_values
     }
 
-    action = "Block"
+    action = var.custom_rules_action
   }
 
   custom_rules {

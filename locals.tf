@@ -16,5 +16,5 @@ output "waf_list" {
 }
 
 output "yaml_content" {
-  value = file("${path.module}/configs/windowsapps.yaml")
+  value = file("${path.module}/configs/waf.yaml")
 }

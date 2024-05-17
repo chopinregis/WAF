@@ -1,7 +1,6 @@
 resource "azurerm_web_application_firewall_policy" "example" {
   for_each            = {for firewall in local.waf_list : "${firewall.name}" => firewall}
   name                = each.value.name
-  name                = "example-wafpolicy"
   resource_group_name = azurerm_resource_group.myregiswafrg.name
   location            = azurerm_resource_group.myregiswafrg.location
 

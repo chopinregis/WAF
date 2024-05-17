@@ -15,6 +15,10 @@ output "waf_list" {
   value = local.waf_list
 }
 
+output "waf_policy" {
+  value = local.waf_policy
+}
+
 output "yaml_content" {
   value = file("${path.module}/configs/waf.yaml")
 }

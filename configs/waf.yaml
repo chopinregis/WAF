@@ -1,2 +1,4 @@
 listofwafpolicy:
-  -policyname: azurewafpolicy
+  - policyname: azurewafpolicy
+  - policyname: awswafpolicy
+  - policyname: gcpwafpolicy

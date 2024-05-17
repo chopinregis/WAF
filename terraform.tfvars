@@ -31,9 +31,9 @@ variable "custom_rules_rule_type" {
   default = "MatchRule"
 }
 
-variable "custom_rules_name" {
+variable "match_conditions_variables" {
   type = string
-  default = "Rule1"
+  default = "RemoteAddr"
 }
 
 variable "custom_rules_name" {

@@ -13,8 +13,8 @@ locals{
 }
 
 
-output "window_app_list" {
-  value = local.window_app_list
+output "waf_list" {
+  value = local.waf_list
 }
 
 output "yaml_content" {

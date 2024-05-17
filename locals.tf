@@ -3,7 +3,7 @@ locals {
   waf_list = flatten([
     for web_firewall in local.waf_policy : [
       for web_firewall_policy in try(web_firewall.listofwafpolicy, []) : {
-        name = web_firewall_policy.name
+        name = web_firewall_policy.policyname
       }
     ]
   ])

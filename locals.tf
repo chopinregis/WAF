@@ -1,6 +1,6 @@
 locals{
   window_app=[for f in fileset("${path.module}/configs", "[^_]*.yaml") : yamldecode(file("${path.module}/configs/${f}"))]
-  window_app_list = flatten([
+  waf_list = flatten([
     for app in local.window_app : [
       for windowapps in try(app.listofwindowapp, []) :{
         name = windowapps.name

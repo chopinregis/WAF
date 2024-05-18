@@ -1,6 +1,6 @@
 custom_rules_name = "Rule1"
 custom_rules_priority = 1
-custom_rules_rule_type = "Rule1"
+custom_rules_rule_type = "MatchRule"
 match_conditions_variables = "RemoteAddr"
 match_conditions_operator = "IPMatch"
 match_conditions_negation_condition = false
